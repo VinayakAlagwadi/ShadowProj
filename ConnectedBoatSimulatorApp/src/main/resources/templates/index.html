@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat Simulator</title>
+    <style>
+        div {
+            background-color: rgba(255, 250, 250, 0.63);
+          width:50%;
+          
+          border: 15px solid rgb(105, 155, 247);
+          padding: 50px;
+          margin: 50px;
+        }
+        html {
+  background: url(back.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+        </style>
+
+        
+</head>
+<body >
+   <center><h2 style="color: azure; background-color: blue ;"><b style="font-size: larger; font-family: 'Times New Roman', Times, serif;  ">Connected Boat Simulator</b></h2></center> 
+ 
+
+
+<center><div >
+
+    <form action="/boat"  method="POST">
+        Boat Hull ID -   <input type="text" name="hull_id"> &emsp;&emsp;  No of Engines -    <input 
+        type="number" name="no"> 
+
+        <hr>
+        Boat Location - <input type="text" id="location">&emsp; LOG - <input type="text" name="log" id="log"> LAT - <input type="text" name="lat" id="lat"> <br><hr>
+        Boat Speed - <input type="range" list="tickmarks" name="rangeInput" min="0" max="200" onchange="updateTextInput(this.value);">Mph  <datalist id="tickmarks">
+            <option value="0"></option>
+            <option value="20"></option>
+            <option value="40"></option>
+            <option value="60"></option>
+            <option value="80"></option>
+            <option value="100"></option>
+            <option value="120"></option>
+            <option value="140"></option>
+            <option value="160"></option>
+            <option value="180"></option>
+            <option value="200"></option>
+          </datalist> 
+          
+        &emsp;&emsp;Boat Door - Open <input type="checkbox" name="open" id="door_open">Close<input type="checkbox" name="close" id="close_open">
+          <br><br>
+        <input type="button" value="START" name="START" id="start_btn" style="background-color: rgb(243, 72, 66);">
+        &emsp;&emsp;
+        <input type="button" name="STOP" id="stop_btn" value="STOP" style="background-color: rgb(49, 197, 36);">
+        &emsp;&emsp;
+        <input  type="submit" id="update_btn" value="UPDATE" style="background-color: dodgerblue;">
+        <hr>
+       
+      
+
+
+
+    </form>
+</div></center>
+</body>
+</html>
